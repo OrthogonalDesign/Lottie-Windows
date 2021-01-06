@@ -11,6 +11,7 @@ using System.Linq;
 using Microsoft.Toolkit.Uwp.UI.Lottie.LottieData;
 using Microsoft.Toolkit.Uwp.UI.Lottie.LottieMetadata;
 using Microsoft.Toolkit.Uwp.UI.Lottie.WinCompData;
+using Microsoft.Toolkit.Uwp.UI.Lottie.WinCompData.Translation;
 
 namespace Microsoft.Toolkit.Uwp.UI.Lottie.LottieToWinComp
 {
