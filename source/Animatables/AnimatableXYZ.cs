@@ -2,12 +2,12 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 // See the LICENSE file in the project root for more information.
 
-namespace Microsoft.Toolkit.Uwp.UI.Lottie.LottieData
+namespace Microsoft.Toolkit.Uwp.UI.Lottie.Animatables
 {
     /// <summary>
     /// An animatable Vector3 value expressed as 3 animatable floating point values.
     /// </summary>
-#if PUBLIC_LottieData
+#if PUBLIC_Animatables
     public
 #endif
     sealed class AnimatableXYZ : IAnimatableVector3
@@ -31,6 +31,22 @@ namespace Microsoft.Toolkit.Uwp.UI.Lottie.LottieData
         public Animatable<double> Y { get; }
 
         public Animatable<double> Z { get; }
+
+        public AnimatableXYZ WithOffset(Vector3 offset)
+            => new AnimatableXYZ(X.Select(x => x + offset.X), Y.Select(y => y + offset.Y), Z.Select(z => z + offset.Z));
+
+        public AnimatableXYZ WithTimeOffset(double timeOffset)
+            => timeOffset == 0
+                ? this
+                : new AnimatableXYZ(X.WithTimeOffset(timeOffset), Y.WithTimeOffset(timeOffset), Z.WithTimeOffset(timeOffset));
+
+        IAnimatableVector3 IAnimatableVector3.WithTimeOffset(double timeOffset)
+            => WithTimeOffset(timeOffset);
+
+        IAnimatableValue<Vector3> IAnimatableValue<Vector3>.WithTimeOffset(double timeOffset)
+        {
+            throw Exceptions.TODO;
+        }
 
         /// <inheritdoc/>
         public bool IsAnimated => X.IsAnimated || Y.IsAnimated || Z.IsAnimated;
