@@ -29,6 +29,9 @@ namespace Microsoft.Toolkit.Uwp.UI.Lottie.LottieToWinComp
                     : new Animatable<PathGeometry>(optimizedPathData.InitialValue, path.Data.PropertyIndex));
         }
 
+        public static TrimmedAnimatable<Vector2> TrimAnimatable(LayerContext context, IAnimatableVector2 animatable)
+            => TrimAnimatable<Vector2>(context, (AnimatableVector2)animatable);
+
         public static TrimmedAnimatable<Vector3> TrimAnimatable(LayerContext context, IAnimatableVector3 animatable)
             => TrimAnimatable<Vector3>(context, (AnimatableVector3)animatable);
 
