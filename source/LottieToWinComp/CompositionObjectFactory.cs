@@ -155,7 +155,7 @@ namespace Microsoft.Toolkit.Uwp.UI.Lottie.LottieToWinComp
             if (color.A == 0)
             {
                 // Transparent brushes that are never animated are all equivalent.
-                color = LottieData.Color.TransparentBlack;
+                color = Animatables.Color.TransparentBlack;
             }
 
             if (!_nonAnimatedColorBrushes.TryGetValue(color, out var result))

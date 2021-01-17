@@ -29,6 +29,9 @@ namespace Microsoft.Toolkit.Uwp.UI.Lottie.Animatables
 
         public Animatable<double> Y { get; }
 
+        public static implicit operator AnimatableXY(AnimatableXYZ value)
+            => new AnimatableXY(value.X, value.Y);
+
         public AnimatableXY WithOffset(Vector2 offset)
             => new AnimatableXY(X.Select(x => x + offset.X), Y.Select(y => y + offset.Y));
 

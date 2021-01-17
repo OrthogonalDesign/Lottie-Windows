@@ -2,6 +2,8 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 // See the LICENSE file in the project root for more information.
 
+using Microsoft.Toolkit.Uwp.UI.Lottie.Animatables;
+
 namespace Microsoft.Toolkit.Uwp.UI.Lottie.LottieData
 {
 #if PUBLIC_LottieData
@@ -12,8 +14,8 @@ namespace Microsoft.Toolkit.Uwp.UI.Lottie.LottieData
         public Rectangle(
             in ShapeLayerContentArgs args,
             DrawingDirection drawingDirection,
-            IAnimatableVector3 position,
-            IAnimatableVector3 size,
+            IAnimatableVector2 position,
+            IAnimatableVector2 size,
             Animatable<double> roundness)
             : base(in args, drawingDirection)
         {
@@ -31,9 +33,9 @@ namespace Microsoft.Toolkit.Uwp.UI.Lottie.LottieData
         /// </summary>
         public Animatable<double> Roundness { get; }
 
-        public IAnimatableVector3 Size { get; }
+        public IAnimatableVector2 Size { get; }
 
-        public IAnimatableVector3 Position { get; }
+        public IAnimatableVector2 Position { get; }
 
         /// <inheritdoc/>
         public override ShapeContentType ContentType => ShapeContentType.Rectangle;

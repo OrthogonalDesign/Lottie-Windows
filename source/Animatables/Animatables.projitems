@@ -11,7 +11,9 @@
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Animatable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AnimatableVector2.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AnimatableVector2Type.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AnimatableVector3.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AnimatableVector3Type.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AnimatableXY.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AnimatableXYZ.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BezierSegment.cs" />
@@ -22,6 +24,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Easing.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Enum.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Exceptions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ExtensionMethods.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GradientStop.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)HoldEasing.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IAnimatableValue.cs" />

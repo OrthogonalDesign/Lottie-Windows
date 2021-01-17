@@ -2,6 +2,8 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 // See the LICENSE file in the project root for more information.
 
+using Microsoft.Toolkit.Uwp.UI.Lottie.Animatables;
+
 namespace Microsoft.Toolkit.Uwp.UI.Lottie.LottieData
 {
 #if PUBLIC_LottieData
@@ -11,9 +13,9 @@ namespace Microsoft.Toolkit.Uwp.UI.Lottie.LottieData
     {
         public RepeaterTransform(
             in ShapeLayerContentArgs args,
-            IAnimatableVector3 anchor,
-            IAnimatableVector3 position,
-            IAnimatableVector3 scalePercent,
+            IAnimatableVector2 anchor,
+            IAnimatableVector2 position,
+            IAnimatableVector2 scalePercent,
             Animatable<Rotation> rotation,
             Animatable<Opacity> opacity,
             Animatable<Opacity> startOpacity,

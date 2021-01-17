@@ -17,13 +17,4 @@ namespace Microsoft.Toolkit.Uwp.UI.Lottie.Animatables
         /// <returns>The adjusted animated value.</returns>
         new IAnimatableVector3 WithTimeOffset(double timeOffset);
     }
-
-#if PUBLIC_LottieData
-    public
-#endif
-    enum AnimatableVector3Type
-    {
-        Vector3,
-        XYZ,
-    }
 }

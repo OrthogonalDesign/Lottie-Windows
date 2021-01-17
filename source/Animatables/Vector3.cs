@@ -24,6 +24,8 @@ namespace Microsoft.Toolkit.Uwp.UI.Lottie.Animatables
 
         public readonly double Z;
 
+        public Vector2 WithoutZ() => new Vector2(X, Y);
+
         public static readonly Vector3 Zero = new Vector3(0, 0, 0);
 
         public static readonly Vector3 One = new Vector3(1, 1, 1);
