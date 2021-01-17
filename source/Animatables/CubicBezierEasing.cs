@@ -8,9 +8,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Microsoft.Toolkit.Uwp.UI.Lottie.IR
+namespace Microsoft.Toolkit.Uwp.UI.Lottie.Animatables
 {
-#if PUBLIC_IR
+#if PUBLIC_Animatables
     public
 #endif
     sealed class CubicBezierEasing : Easing, IEquatable<CubicBezierEasing>

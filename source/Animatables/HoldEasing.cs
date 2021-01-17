@@ -6,13 +6,13 @@
 
 using System;
 
-namespace Microsoft.Toolkit.Uwp.UI.Lottie.IR
+namespace Microsoft.Toolkit.Uwp.UI.Lottie.Animatables
 {
     /// <summary>
     /// An easing that holds the current value until the key frame time, then
     /// jumps to the key frame value.
     /// </summary>
-#if PUBLIC_IR
+#if PUBLIC_Animatables
     public
 #endif
     sealed class HoldEasing : Easing, IEquatable<HoldEasing>

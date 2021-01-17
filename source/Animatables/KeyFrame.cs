@@ -6,14 +6,14 @@
 
 using System;
 
-namespace Microsoft.Toolkit.Uwp.UI.Lottie.IR
+namespace Microsoft.Toolkit.Uwp.UI.Lottie.Animatables
 {
     /// <summary>
     /// Describes a value at a particular point in time, and an optional easing function to
     /// interpolate from the previous value.
     /// </summary>
     /// <typeparam name="T">The type of the key frame's value.</typeparam>
-#if PUBLIC_IR
+#if PUBLIC_Animatables
     public
 #endif
     sealed class KeyFrame<T> : IEquatable<KeyFrame<T>>

@@ -7,9 +7,9 @@
 using System;
 using static Microsoft.Toolkit.Uwp.UI.Lottie.IR.Exceptions;
 
-namespace Microsoft.Toolkit.Uwp.UI.Lottie.IR
+namespace Microsoft.Toolkit.Uwp.UI.Lottie.Animatables
 {
-#if PUBLIC_IR
+#if PUBLIC_Animatables
     public
 #endif
     abstract class Easing : IEquatable<Easing>

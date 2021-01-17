@@ -6,12 +6,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Microsoft.Toolkit.Uwp.UI.Lottie.IR
+namespace Microsoft.Toolkit.Uwp.UI.Lottie.Animatables
 {
     /// <summary>
     /// An animatable Vector2 value expressed as a single animatable Vector3 value.
     /// </summary>
-#if PUBLIC_IR
+#if PUBLIC_Animatables
     public
 #endif
     sealed class AnimatableVector2 : Animatable<Vector2>, IAnimatableVector2

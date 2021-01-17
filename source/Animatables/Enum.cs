@@ -6,7 +6,7 @@
 
 using System;
 
-namespace Microsoft.Toolkit.Uwp.UI.Lottie.IR
+namespace Microsoft.Toolkit.Uwp.UI.Lottie.Animatables
 {
     /// <summary>
     /// Wraps an enum, but implemented as a struct so that
@@ -14,7 +14,7 @@ namespace Microsoft.Toolkit.Uwp.UI.Lottie.IR
     /// <see cref="Animatable{T}"/>.
     /// </summary>
     /// <typeparam name="T">An enum type.</typeparam>
-#if PUBLIC_IR
+#if PUBLIC_Animatables
     public
 #endif
     readonly struct Enum<T> : IEquatable<Enum<T>>

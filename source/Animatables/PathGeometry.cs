@@ -6,12 +6,12 @@
 
 using System;
 
-namespace Microsoft.Toolkit.Uwp.UI.Lottie.IR
+namespace Microsoft.Toolkit.Uwp.UI.Lottie.Animatables
 {
     /// <summary>
     /// A sequence of <see cref="BezierSegment"/>s that describes the shape of a path.
     /// </summary>
-#if PUBLIC_IR
+#if PUBLIC_Animatables
     public
 #endif
     sealed class PathGeometry : IEquatable<PathGeometry>

@@ -6,9 +6,9 @@
 
 using System;
 
-namespace Microsoft.Toolkit.Uwp.UI.Lottie.IR
+namespace Microsoft.Toolkit.Uwp.UI.Lottie.Animatables
 {
-#if PUBLIC_IR
+#if PUBLIC_Animatables
     public
 #endif
     sealed class Color : IEquatable<Color>

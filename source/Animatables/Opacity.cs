@@ -6,12 +6,12 @@
 
 using System;
 
-namespace Microsoft.Toolkit.Uwp.UI.Lottie.IR
+namespace Microsoft.Toolkit.Uwp.UI.Lottie.Animatables
 {
     /// <summary>
     /// An opacity value. 0 is transparent, 1 is opaque.
     /// </summary>
-#if PUBLIC_IR
+#if PUBLIC_Animatables
     public
 #endif
     readonly struct Opacity : IEquatable<Opacity>

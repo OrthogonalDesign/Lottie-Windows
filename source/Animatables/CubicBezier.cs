@@ -6,13 +6,13 @@
 
 using System;
 
-namespace Microsoft.Toolkit.Uwp.UI.Lottie.IR
+namespace Microsoft.Toolkit.Uwp.UI.Lottie.Animatables
 {
     /// <summary>
     /// Describes a cubic Bezier function as the 2nd and 3rd control points where
     /// the 1st and 4th control points are 0,0 and 1,1 respectively.
     /// </summary>
-#if PUBLIC_IR
+#if PUBLIC_Animatables
     public
 #endif
     readonly struct CubicBezier : IEquatable<CubicBezier>

@@ -111,6 +111,8 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "IRToWinComp", "..\source\IR
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "LottieToIR", "..\source\LottieToIR\LottieToIR.shproj", "{285F13C7-9B2C-481D-855E-31C8098337CA}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Animatables", "..\source\Animatables\Animatables.shproj", "{FC89273A-B2DA-4625-8A73-EF02A658D65E}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		..\source\LottieToWinComp\LottieToWinComp.projitems*{0340244a-683c-405e-838b-f93872779532}*SharedItemsImports = 13
@@ -127,6 +129,7 @@ Global
 		..\source\IR\IR.projitems*{a5e90a6c-a27a-4550-8572-64e1d0c320ea}*SharedItemsImports = 13
 		..\source\CompMetadata\CompMetadata.projitems*{b0197c19-bdf5-473e-a022-e21f6122eee5}*SharedItemsImports = 13
 		..\source\LottieData\LottieData.projitems*{b3db16ee-a821-4474-a188-e64926529bbd}*SharedItemsImports = 13
+		..\source\Animatables\Animatables.projitems*{cb12d5ba-a6fe-41e2-b555-83c903cce92a}*SharedItemsImports = 5
 		..\source\CompMetadata\CompMetadata.projitems*{cb12d5ba-a6fe-41e2-b555-83c903cce92a}*SharedItemsImports = 5
 		..\source\DotLottie\DotLottie.projitems*{cb12d5ba-a6fe-41e2-b555-83c903cce92a}*SharedItemsImports = 5
 		..\source\GenericData\GenericData.projitems*{cb12d5ba-a6fe-41e2-b555-83c903cce92a}*SharedItemsImports = 5
@@ -145,6 +148,7 @@ Global
 		..\source\YamlData\YamlData.projitems*{cb12d5ba-a6fe-41e2-b555-83c903cce92a}*SharedItemsImports = 5
 		..\source\WinCompData\WinCompData.projitems*{d02870de-7ded-4916-85d4-3175ceedef74}*SharedItemsImports = 13
 		..\source\UIDataCodeGen\UIDataCodeGen.projitems*{d02be6c8-14db-4b4f-8600-f3c9b69c104d}*SharedItemsImports = 13
+		..\source\Animatables\Animatables.projitems*{fc89273a-b2da-4625-8a73-ef02a658d65e}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -194,6 +198,7 @@ Global
 		{A5E90A6C-A27A-4550-8572-64E1D0C320EA} = {AB232F35-AAF7-4AE2-B1D2-45DD9BC2F7D7}
 		{3F38C7BB-EC65-4944-89C0-CD7517DD6AC2} = {AB232F35-AAF7-4AE2-B1D2-45DD9BC2F7D7}
 		{285F13C7-9B2C-481D-855E-31C8098337CA} = {AB232F35-AAF7-4AE2-B1D2-45DD9BC2F7D7}
+		{FC89273A-B2DA-4625-8A73-EF02A658D65E} = {AB232F35-AAF7-4AE2-B1D2-45DD9BC2F7D7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {51B9BB4C-5196-41CF-950C-12B04AD8A61C}

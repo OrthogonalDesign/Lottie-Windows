@@ -8,12 +8,12 @@ using System;
 using System.Collections.Generic;
 using static Microsoft.Toolkit.Uwp.UI.Lottie.IR.Exceptions;
 
-namespace Microsoft.Toolkit.Uwp.UI.Lottie.IR
+namespace Microsoft.Toolkit.Uwp.UI.Lottie.Animatables
 {
     /// <summary>
     /// A segment defined as a cubic Bezier curve from <see cref="ControlPoint0"/> to <see cref="ControlPoint3"/>.
     /// </summary>
-#if PUBLIC_IR
+#if PUBLIC_Animatables
     public
 #endif
     sealed class BezierSegment : IEquatable<BezierSegment>

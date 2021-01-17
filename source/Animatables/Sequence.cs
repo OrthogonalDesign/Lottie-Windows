@@ -9,13 +9,13 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Microsoft.Toolkit.Uwp.UI.Lottie.IR
+namespace Microsoft.Toolkit.Uwp.UI.Lottie.Animatables
 {
     /// <summary>
     /// A sequence of items.
     /// </summary>
     /// <typeparam name="T">The type of each item in the sequence.</typeparam>
-#if PUBLIC_IR
+#if PUBLIC_Animatables
     public
 #endif
     sealed class Sequence<T> : IEquatable<Sequence<T>>, IEnumerable<T>, IReadOnlyList<T>

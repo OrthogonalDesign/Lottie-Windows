@@ -5,12 +5,12 @@
 #nullable enable
 using System;
 
-namespace Microsoft.Toolkit.Uwp.UI.Lottie.IR
+namespace Microsoft.Toolkit.Uwp.UI.Lottie.Animatables
 {
     /// <summary>
     /// A trimming amount. Used to describe how much of a path should be trimmed.
     /// </summary>
-#if PUBLIC_IR
+#if PUBLIC_Animatables
     public
 #endif
     readonly struct Trim : IEquatable<Trim>

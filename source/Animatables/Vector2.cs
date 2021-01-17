@@ -7,9 +7,9 @@
 using System;
 using SNVector2 = System.Numerics.Vector2;
 
-namespace Microsoft.Toolkit.Uwp.UI.Lottie.IR
+namespace Microsoft.Toolkit.Uwp.UI.Lottie.Animatables
 {
-#if PUBLIC_IR
+#if PUBLIC_Animatables
     public
 #endif
     readonly struct Vector2 : IEquatable<Vector2>

@@ -6,16 +6,15 @@
 
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 
-namespace Microsoft.Toolkit.Uwp.UI.Lottie.IR
+namespace Microsoft.Toolkit.Uwp.UI.Lottie.Animatables
 {
     /// <summary>
     /// A value that may be animated.
     /// </summary>
     /// <typeparam name="T">The type of the value.</typeparam>
-#if PUBLIC_IR
+#if PUBLIC_Animatables
     public
 #endif
     class Animatable<T> : IAnimatableValue<T>
