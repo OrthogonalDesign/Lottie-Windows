@@ -111,6 +111,10 @@ namespace Microsoft.Toolkit.Uwp.UI.Lottie.Animatables
         public Animatable<T> Select(Func<T, T> selector)
             => new Animatable<T>(KeyFrames.Select(kf => new KeyFrame<T>(kf.Frame, selector(kf.Value), kf.Easing)));
 
+        public Animatable<Tnew> Select<Tnew>(Func<T, Tnew> selector)
+            where Tnew : IEquatable<Tnew>
+            => new Animatable<Tnew>(KeyFrames.Select(kf => new KeyFrame<Tnew>(kf.Frame, selector(kf.Value), kf.Easing)));
+
         /// <inheritdoc/>
         // Not a great hash code because it ignore the KeyFrames, but quick.
         public override int GetHashCode() => InitialValue.GetHashCode();

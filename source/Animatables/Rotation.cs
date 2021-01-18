@@ -29,6 +29,22 @@ namespace Microsoft.Toolkit.Uwp.UI.Lottie.Animatables
 
         public static Rotation FromDegrees(double value) => new Rotation(value);
 
+        /// <summary>
+        /// Returns the result of rotating <paramref name="point"/> around <paramref name="origin"/>.
+        /// </summary>
+        /// <returns>The resulting point.</returns>
+        public Vector2 RotatePointAroundOrigin(Vector2 point, Vector2 origin)
+        {
+            var cosTheta = Math.Cos(Radians);
+            var sinTheta = Math.Sin(Radians);
+            var xCenterpoint = point.X - origin.X;
+            var yCenterpoint = point.Y - origin.Y;
+
+            var x = origin.X + (cosTheta * xCenterpoint) - (sinTheta * yCenterpoint);
+            var y = origin.Y + (sinTheta * xCenterpoint) - (cosTheta * yCenterpoint);
+            return new Vector2(x, y);
+        }
+
         public bool Equals(Rotation other) => other.Degrees == Degrees;
 
         public override bool Equals(object? obj) => obj is Rotation other && Equals(other);
