@@ -2,6 +2,8 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 // See the LICENSE file in the project root for more information.
 
+using System;
+
 namespace Microsoft.Toolkit.Uwp.UI.Lottie.Animatables
 {
     /// <summary>
@@ -32,8 +34,13 @@ namespace Microsoft.Toolkit.Uwp.UI.Lottie.Animatables
         public static implicit operator AnimatableXY(AnimatableXYZ value)
             => new AnimatableXY(value.X, value.Y);
 
+        public AnimatableXY Select(Func<double, double> selectorX, Func<double, double> selectorY)
+            => new AnimatableXY(
+                X.Select(selectorX),
+                Y.Select(selectorY));
+
         public AnimatableXY WithOffset(Vector2 offset)
-            => new AnimatableXY(X.Select(x => x + offset.X), Y.Select(y => y + offset.Y));
+            => Select(x => x + offset.X, y => y + offset.Y);
 
         public AnimatableXY WithTimeOffset(double timeOffset)
             => timeOffset == 0

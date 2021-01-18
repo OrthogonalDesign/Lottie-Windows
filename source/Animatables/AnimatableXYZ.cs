@@ -2,6 +2,8 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 // See the LICENSE file in the project root for more information.
 
+using System;
+
 namespace Microsoft.Toolkit.Uwp.UI.Lottie.Animatables
 {
     /// <summary>
@@ -32,8 +34,14 @@ namespace Microsoft.Toolkit.Uwp.UI.Lottie.Animatables
 
         public Animatable<double> Z { get; }
 
+        public AnimatableXYZ Select(Func<double, double> selectorX, Func<double, double> selectorY, Func<double, double> selectorZ)
+        => new AnimatableXYZ(
+            X.Select(selectorX),
+            Y.Select(selectorY),
+            Z.Select(selectorZ));
+
         public AnimatableXYZ WithOffset(Vector3 offset)
-            => new AnimatableXYZ(X.Select(x => x + offset.X), Y.Select(y => y + offset.Y), Z.Select(z => z + offset.Z));
+            => Select(x => x + offset.X, y => y + offset.Y, z => z + offset.Z);
 
         public AnimatableXYZ WithTimeOffset(double timeOffset)
             => timeOffset == 0
