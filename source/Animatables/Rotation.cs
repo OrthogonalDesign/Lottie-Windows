@@ -29,6 +29,8 @@ namespace Microsoft.Toolkit.Uwp.UI.Lottie.Animatables
 
         public static Rotation FromDegrees(double value) => new Rotation(value);
 
+        public static Rotation FromRadians(double value) => new Rotation(value * 180 / Math.PI);
+
         /// <summary>
         /// Returns the result of rotating <paramref name="point"/> around <paramref name="origin"/>.
         /// </summary>
@@ -52,6 +54,10 @@ namespace Microsoft.Toolkit.Uwp.UI.Lottie.Animatables
         public override int GetHashCode() => Degrees.GetHashCode();
 
         public override string ToString() => $"{Degrees}°";
+
+        public static Rotation operator +(Rotation left, Rotation right) => Rotation.FromDegrees(left.Degrees + right.Degrees);
+
+        public static Rotation operator -(Rotation left, Rotation right) => Rotation.FromDegrees(left.Degrees - right.Degrees);
 
         public static bool operator ==(Rotation left, Rotation right) => left.Degrees == right.Degrees;
 
