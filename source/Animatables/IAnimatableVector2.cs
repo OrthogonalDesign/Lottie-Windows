@@ -11,6 +11,8 @@ namespace Microsoft.Toolkit.Uwp.UI.Lottie.Animatables
     {
         AnimatableVector2Type Type { get; }
 
+        IAnimatableVector2 WithOffset(Vector2 offset);
+
         /// <summary>
         /// The animated value with each key frame offset by the given amount.
         /// </summary>

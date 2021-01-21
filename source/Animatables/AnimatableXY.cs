@@ -47,6 +47,9 @@ namespace Microsoft.Toolkit.Uwp.UI.Lottie.Animatables
                 ? this
                 : new AnimatableXY(X.WithTimeOffset(timeOffset), Y.WithTimeOffset(timeOffset));
 
+        IAnimatableVector2 IAnimatableVector2.WithOffset(Vector2 offset)
+            => WithOffset(offset);
+
         IAnimatableVector2 IAnimatableVector2.WithTimeOffset(double timeOffset)
             => WithTimeOffset(timeOffset);
 

@@ -34,11 +34,16 @@ namespace Microsoft.Toolkit.Uwp.UI.Lottie.Animatables
                 ? this
                 : new AnimatableVector2(KeyFrames.Select(kf => kf.WithTimeOffset(timeOffset)));
 
+        IAnimatableVector2 IAnimatableVector2.WithOffset(Vector2 offset)
+            => WithOffset(offset);
+
         IAnimatableVector2 IAnimatableVector2.WithTimeOffset(double timeOffset)
             => WithTimeOffset(timeOffset);
 
         public new AnimatableVector2 Select(Func<Vector2, Vector2> selector)
-            => new AnimatableVector2(KeyFrames.Select(kf => new KeyFrame<Vector2>(kf.Frame, selector(kf.Value), kf.Easing)));
+            => IsAnimated
+                ? new AnimatableVector2(KeyFrames.Select(kf => new KeyFrame<Vector2>(kf.Frame, selector(kf.Value), kf.Easing)))
+                : new AnimatableVector2(selector(InitialValue));
 
         /// <inheritdoc/>
         public AnimatableVector2Type Type => AnimatableVector2Type.Vector2;

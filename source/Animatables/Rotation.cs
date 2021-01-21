@@ -32,19 +32,25 @@ namespace Microsoft.Toolkit.Uwp.UI.Lottie.Animatables
         public static Rotation FromRadians(double value) => new Rotation(value * 180 / Math.PI);
 
         /// <summary>
-        /// Returns the result of rotating <paramref name="point"/> around <paramref name="origin"/>.
+        /// Returns the result of rotating <paramref name="point"/> around <paramref name="axis"/>.
         /// </summary>
         /// <returns>The resulting point.</returns>
-        public Vector2 RotatePointAroundOrigin(Vector2 point, Vector2 origin)
+        public Vector2 RotatePointAroundAxis(Vector2 point, Vector2 axis)
         {
-            var cosTheta = Math.Cos(Radians);
-            var sinTheta = Math.Sin(Radians);
-            var xCenterpoint = point.X - origin.X;
-            var yCenterpoint = point.Y - origin.Y;
+            var cosTheta = Math.Cos(-Radians);
+            var sinTheta = Math.Sin(-Radians);
 
-            var x = origin.X + (cosTheta * xCenterpoint) - (sinTheta * yCenterpoint);
-            var y = origin.Y + (sinTheta * xCenterpoint) - (cosTheta * yCenterpoint);
-            return new Vector2(x, y);
+            // Normalize the point so that it is rotated around 0,0.
+            var normalizedPoint = point - axis;
+
+            // Calculate the new X and Y values.
+            var newX = (cosTheta * normalizedPoint.X) - (sinTheta * normalizedPoint.Y);
+            var newY = (sinTheta * normalizedPoint.X) + (cosTheta * normalizedPoint.Y);
+
+            // Compensate for the normalization.
+            var result = axis + new Vector2(newX, newY);
+
+            return result;
         }
 
         public bool Equals(Rotation other) => other.Degrees == Degrees;

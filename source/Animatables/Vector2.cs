@@ -39,6 +39,9 @@ namespace Microsoft.Toolkit.Uwp.UI.Lottie.Animatables
         public static Vector2 operator -(Vector2 left, Vector2 right) =>
             new Vector2(left.X - right.X, left.Y - right.Y);
 
+        public static Vector2 operator -(Vector2 value) =>
+            new Vector2(-value.X, -value.Y);
+
         public static Vector2 operator *(Vector2 left, Vector2 right) =>
             new Vector2(left.X * right.X, left.Y * right.Y);
 
